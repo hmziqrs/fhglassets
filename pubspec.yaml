@@ -1,0 +1,19 @@
+name: fhglassets
+description: A sample command-line application.
+version: 0.0.1
+homepage: https://github.com/hackerhgl/fhglassets
+repository: https://github.com/hackerhgl/fhglassets
+issue_tracker: https://github.com/hackerhgl/fhglassets/issues
+
+environment:
+  sdk: '>=2.15.1 <3.0.0'
+
+dependencies:
+  recase: 4.0.0
+
+dev_dependencies:
+  lints: ^1.0.0
+  test: ^1.16.0
+
+executables:
+  fhglassets:

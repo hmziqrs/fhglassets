@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - 'main'
+
+name: Publish package
+jobs:
+  trigger:
+    name: Build Runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # - name: Decode pub credentials base64
+      #   run: echo "PUB_CREDENTIALS=$(echo $ENCODED | base64 -d)" >> $GITHUB_ENV
+      #   env:
+      #     ENCODED: ${{ secrets.PUB_CREDENTIALS }}
+
+      - name: Publish
+        uses: k-paxian/dart-package-publisher@master
+        with:
+          accessToken: ${{ secrets.OAUTH_ACCESS_TOKEN }}
+          refreshToken: ${{ secrets.OAUTH_REFRESH_TOKEN }}
