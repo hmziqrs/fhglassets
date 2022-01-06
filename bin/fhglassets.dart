@@ -1,4 +1,4 @@
-import 'package:fhglassets/fhglassets.dart' as fhglassets;
+import 'package:fhglassets/src/fhglassets.dart' as fhglassets;
 
 void main(List<String> arguments) async {
   await fhglassets.run();
